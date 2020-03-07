@@ -1,0 +1,34 @@
+/* styles */
+/* called by your view template */
+
+/* btw vendor prefixes are added automatically */
+
+/* You might want to try something fancier: */
+/* less: http://lesscss.org/ */
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+  font-family: helvetica, arial, sans-serif;
+}
+
+footer {
+  margin-top: 50px;
+  padding-top: 25px;
+  border-top: 1px solid lightgrey;
+}
+
+footer > a {
+  color: #BBBBBB;
+}
+
+.bold {
+  font-weight: bold;
+}

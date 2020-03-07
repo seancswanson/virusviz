@@ -1,0 +1,1 @@
+export function f(x) { return 2*x }
