@@ -17,24 +17,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="../lib/leaflet/leaflet.css" />
   </head>
   <body>
     <header>
-      <div>
-        virusviz
-      </div>
+      <h1>
+        VIRUSVIZ
+      </h1>
     </header>
 
     <main>
+      <div id="map"></div>
     </main>
 
     <footer>
+      <h2>Made with ♡ by Sean Swanson 2020</h2>
     </footer>
 
     <!-- Your web-app is https, so your scripts need to be too -->
     <script src="https://code.jquery.com/jquery-2.2.1.min.js"
             integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
             crossorigin="anonymous"></script>
+    <script src="../lib/leaflet/leaflet.js"></script>
+
     <script src="/client.js"></script>
 
   </body>
