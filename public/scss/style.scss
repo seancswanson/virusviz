@@ -1,6 +1,7 @@
 @import "colors";
 @import "partials/header";
 @import "partials/footer";
+@import "utility";
 
 * {
   box-sizing: border-box;
@@ -26,12 +27,158 @@ body {
   height: 100%;
 }
 
+h2 {
+  margin: 0;
+}
+
 main {
+  display: grid;
+
+  padding: 20px;
+
+  background-color: #fff;
+  background-image: url("https://www.transparenttextures.com/patterns/diagmonds-light.png");
+
+  grid-template-columns: 2fr 1fr;
+  column-gap: 10px;
   flex: 1;
-  padding: 10px;
-  background: $color-dark-grey;
+
+  overflow: scroll;
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr;
+    row-gap: 10px;
+  }
 }
 
 #map {
   height: 100%;
+
+  border-radius: 2px;
+  box-shadow: #cbcaca 0 0 4px;
+}
+
+.stats-container {
+  display: grid;
+  max-height: 100%;
+  overflow-y: scroll;
+  grid-template-rows: 1fr 1fr;
+  row-gap: 10px;
+
+  .stats-module {
+    padding: 20px;
+
+    border-radius: 2px;
+    background: white;
+    box-shadow: #cbcaca 0 0 4px;
+
+    .module-heading {
+      display: flex;
+
+      margin: 0;
+      margin-bottom: 10px;
+      padding: 10px;
+      padding-left: 0;
+
+      border-top: 3px solid $color-black;
+      border-bottom: 3px solid $color-black;
+
+      align-items: center;
+    }
+
+    .module-item {
+      display: flex;
+
+      margin-bottom: 15px;
+      padding: 4px;
+
+      // border: 1px solid $color-light-grey;
+
+      justify-content: space-between;
+
+      &.sub-item-container {
+        display: grid;
+
+        padding: 0;
+
+        grid-template-columns: 1fr 1fr;
+        column-gap: 10px;
+
+        .sub-item {
+          border: 1px solid rgba(0, 0, 0, 0.1);
+          margin-bottom: 5px;
+          border-radius: 2px;
+          .sub-content-top {
+            text-align: center;
+          }
+
+          .sub-content-bottom {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            text-align: center;
+          }
+
+          .module-sub-heading {
+            font-weight: lighter;
+
+            margin: 0;
+            padding: 5px;
+
+            text-align: center;
+
+            border-radius: 2px;
+            background: rgba(0, 0, 0, 0.1);
+          }
+        }
+
+        @media (max-width: 1200px) and (min-width: 601px) {
+          grid-template-columns: 1fr;
+        }
+      }
+    }
+  }
+}
+
+.country-selector {
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.3;
+
+  display: block;
+
+  box-sizing: border-box;
+  margin-left: 10px;
+  padding: 0.6em 1.4em 0.5em 0.8em;
+
+  border: 1px solid $color-light-grey;
+  border-radius: 2px;
+  background-color: #fff;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23f04e23%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat, repeat;
+  background-position: right 0.5em top 50%, 0 0;
+  background-size: 0.65em auto, 100%;
+  box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.04);
+
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.country-selector::-ms-expand {
+  display: none;
+}
+.country-selector:hover {
+  border-color: #888;
+}
+.country-selector:focus {
+  color: #222;
+  border-color: #aaa;
+  outline: none;
+  box-shadow: 0 0 1px 3px rgba(59, 153, 252, 0.7);
+  box-shadow: 0 0 0 3px -moz-mac-focusring;
+}
+.country-selector option {
+  font-weight: normal;
 }

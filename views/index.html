@@ -10,8 +10,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Welcome to HyperDev!</title>
-    <meta name="description" content="CoronaViz">
+    <title>virusviz</title>
+    <meta name="description" content="virusviz">
     <link id="favicon" rel="icon" href="https://hyperweb.space/favicon.ico" type="image/x-icon">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -28,6 +28,76 @@
 
     <main>
       <div id="map"></div>
+      <div class="stats-container">
+        <div class="stats-module">
+          <div class="module-heading">
+            <h2>Cases in the</h2>
+            <select class="country-selector" name="Country">
+              <option>United States</option>
+            </select>
+          </div>
+          <div class="cases">
+            <div class="module-item">
+              <div class="item-left">Total Cases</div>
+              <div class="item-right">708</div>
+            </div>
+            <div class="module-item">
+              <div class="item-left">Deaths</div>
+              <div class="item-right">27</div>
+            </div>
+            <div class="module-item">
+              <div class="item-left">Recovered</div>
+              <div class="item-right green-text">15</div>
+            </div>
+            <div class="module-item sub-item-container">
+              <div class="item-left sub-item">
+                  <h3 class="module-sub-heading">Active Cases</h3>
+                  <div class="sub-content-top">
+                    <p>666</p>
+                    <p>Currently Infected Patients</p>
+                  </div>
+                  <div class="sub-content-bottom">
+                    <div class="bottom-left">
+                      <p>658(99%)</p>
+                      <p>in Mild Condition</p>
+                  </div>
+                    <div class="bottom-right">
+                      <p>8(1%)</p>
+                      <p>Serious or Critical</p>
+                    </div>
+                  </div>
+            </div>
+              <div class="item-right sub-item">
+                  <h3 class="module-sub-heading">Closed Cases</h3>
+                  <div class="sub-content-top">
+                    <p>42</p>
+                    <p>Cases which had an outcome:</p>
+                  </div>
+                  <div class="sub-content-bottom">
+                    <div class="bottom-left">
+                      <p>15(36%)</p>
+                      <p>Recovered / Discharged</p>
+                  </div>
+                    <div class="bottom-right">
+                      <p>27(64%)</p>
+                      <p>Deaths</p>
+                    </div>
+                  </div>
+              </div>
+          </div>
+          </div>
+        </div>
+        <div class="stats-module">
+          <h2 class="module-heading">#COVID19</h2>
+          <div class="newsfeed">
+            <div class="module-item"><div class="item-left"></div><div class="item-right"></div></div>
+            <div class="module-item"><div class="item-left"></div><div class="item-right"></div></div>
+            <div class="module-item"><div class="item-left"></div><div class="item-right"></div></div>
+            <div class="module-item"><div class="item-left"></div><div class="item-right"></div></div>
+            <div class="module-item"><div class="item-left"></div><div class="item-right"></div></div>
+          </div>
+        </div>
+      </div>
     </main>
 
     <footer>
